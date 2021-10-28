@@ -25,7 +25,7 @@ app.use(cors());
 app.use(require("./routes"));
 
 server.listen(process.env.PORT || 8080, () => {
-	console.log("Server is running now! On port 8080");
+	console.log("Server is running now On port 8080");
 });
 
 module.exports = app;
