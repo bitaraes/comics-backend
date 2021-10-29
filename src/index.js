@@ -19,6 +19,7 @@ mongoose
 app.use(cors());
 
 app.use(express.json());
+app.use(express.static(__dirname));
 
 app.use(express.json());
 app.use(cors());
