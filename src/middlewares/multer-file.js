@@ -28,18 +28,18 @@ module.exports = {
 		fileSize: 5 * 1024 * 1024,
 	},
 
-	// fileFilter: (req, file, cb) => {
-	//   const alllowMimes = [
-	//     'image/jpeg',
-	//     'image/pjpeg',
-	//     'image/png',
-	//     'image/gif'
-	//   ]
+	fileFilter: (req, file, cb) => {
+		const alllowMimes = [
+			"image/jpeg",
+			"image/pjpeg",
+			"image/png",
+			"image/gif",
+		];
 
-	//   if (alllowMimes.includes(file.mimetype)) {
-	//     cb(null, true)
-	//   } else {
-	//     cb(new Error('Invalid image type'))
-	//   }
-	// }
+		if (alllowMimes.includes(file.mimetype)) {
+			cb(null, true);
+		} else {
+			cb(new Error("Invalid image type"));
+		}
+	},
 };
