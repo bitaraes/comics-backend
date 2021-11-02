@@ -22,7 +22,7 @@ const storageTypes = {
 
 module.exports = {
 	dest: path.resolve(__dirname, "..", "data", "comics"),
-	storage: storageTypes[process.env.STORAGE_TYPE],
+	storage: storageTypes[local],
 
 	limits: {
 		fileSize: 5 * 1024 * 1024,
